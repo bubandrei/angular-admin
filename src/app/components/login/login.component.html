@@ -14,7 +14,7 @@
                                 <input formControlName="email" type="email" id="typeEmailX"
                                     class="form-control form-control-lg" />
                                 <label class="form-label" for="typeEmailX">Email</label>
-                                <p><small class="text-danger">Email is required</small></p>
+                                <p *ngIf="this.loginForm.get('email')?.invalid && this.loginForm.get('email')?.touched"><small class="text-danger">Email is required</small></p>
                             </div>
 
                             <div class="form-outline form-white mb-4">
